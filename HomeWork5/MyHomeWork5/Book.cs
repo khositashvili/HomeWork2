@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,15 @@ namespace MyHomeWork5
         {
             get { return _copiesAvailable; }
             set { _copiesAvailable = value; }
+        }
+
+        //Constructor
+        public Book (string title, string author, int isbn, int copiesAvailable)
+        {
+            Title = title;
+            Author = author;
+            ISBN = isbn;
+            CopiesAvailable = copiesAvailable;
         }
 
         //Methods
