@@ -1,4 +1,4 @@
-﻿void task1();
+﻿void task1()
 {
     int num1 = 15;
     int num2 = 5;
@@ -11,7 +11,7 @@
     Console.WriteLine("3. Multiplication result: " + mult);
     Console.WriteLine("4. Division result: " + div);
 }
-void task2();
+void task2()
 {
     float flt = 1 / 7f;
     double dbl = 1 / 7d;

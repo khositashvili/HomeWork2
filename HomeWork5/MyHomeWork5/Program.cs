@@ -1,7 +1,11 @@
-﻿void task1()
+﻿using MyHomeWork5;
+
+static void task1()
 {
-    Console.WriteLine("Welcome!!!!");
+    var book1 = new Book("Gantskobis Phsycology", "Uznadze", 1000000, 100);
+
+    Console.WriteLine(book1.Author);
+
 }
 
 task1();
-
