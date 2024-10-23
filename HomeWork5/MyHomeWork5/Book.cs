@@ -28,7 +28,20 @@ namespace MyHomeWork5
             get { return _author; }
             set { _author = value; }
         }
-        public string ISBN { get; set; } //Only set??? DisplayInfo get-is გარეშე როგორ წამოიღებს მერე?
+        public string ISBN 
+        {
+            set 
+            {
+                if (_isbn.Length == 10)
+                {
+                    //_isbn = value;
+                }
+                else
+                {
+                    //Console.WriteLine("ISBN must be exactly 10 digits.");
+                }
+            }
+        }
         public int TotalCopies
         {
             get { return _totalCopies; }
@@ -45,7 +58,7 @@ namespace MyHomeWork5
         {
             Title = title;
             Author = author;
-            ISBN = isbn;
+            _isbn = isbn;
             TotalCopies = totalCopies;
             CopiesAvailable = totalCopies;
         }
@@ -53,7 +66,7 @@ namespace MyHomeWork5
         //Methods
         public void DisplayInfo()
         {
-            Console.WriteLine($"\"{Title}\" by {Author} (ISBN:{ISBN}). Copies available: {TotalCopies}");
+            Console.WriteLine($"\"{Title}\" by {Author} (ISBN:{_isbn}). Copies available: {CopiesAvailable}");
         }
 
         public void BorrowBook()
@@ -107,7 +120,6 @@ namespace MyHomeWork5
             if (bookToRemove != null)
             {
                 books.Remove(bookToRemove);
-                //აქ მინდოდა რომ დაკლებოდა წიგნების TotalCopies რომ დაკლებოდა, მაგრამ ვერ ვქენი :(
                 Console.WriteLine($"Book \"{title}\" has been removed from the library.");
             }
             else
